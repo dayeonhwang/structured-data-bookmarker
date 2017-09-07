@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="structured-data-bookmarker" property="og:title">
+    <meta property="og:image" content="http://code.scottshipp.com/wp-content/uploads/2014/09/635x282xscala.gif.pagespeed.ic_.uwF00NWKP7.png">
+    <meta content="testing">
+    <meta content="testing url" property="og:url">
+    <title>Social Sharer Bookmarker</title>
+</head>
+<body>
+
+    <h2>Social Sharer Bookmarker</h2>
+    <p>Drag this to your browser's Bookmarklet bar:</p>
+    <a href="javascript: (function () {
+        var style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        style.href = 'https://localhost:4443/node_modules/jquery-ui/themes/base/dialog.css';
+        document.head.appendChild(style);
+
+        var style2 = document.createElement('link');
+        style2.rel = 'stylesheet';
+        style2.type = 'text/css';
+        style2.href = 'https://localhost:4443/node_modules/jquery-ui/themes/base/all.css';
+        document.head.appendChild(style2);
+
+        var code = document.createElement('script');
+        code.setAttribute('src', 'https://localhost:4443/target/scala-2.12/scalajs-bundler/main/social-sharer-fastopt-bundle.js');
+        code.setAttribute('type', 'text/javascript');
+        document.body.appendChild(code);
+
+        var execute = document.createElement('script');
+        execute.setAttribute('src', 'https://localhost:4443/scripts/launcher.js');
+        execute.setAttribute('type', 'text/javascript');
+        document.body.appendChild(execute);
+    }());" id="bookmarker">Social Bookmarker</a>
+
+</body>
+</html>
